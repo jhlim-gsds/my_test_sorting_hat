@@ -37,6 +37,16 @@ register.py 실행
 
 search.py 실행
 ### update_info
-update_seat_owner.py
+update_seat_owner.py  <- 이미 자리가 배정되었을 경우 재배정. 
+(1번은 random하게 재배정, 2는 seat를 지정해줌, 3은 전체 ownership relation을 없애거나 pid를 적을 경우 해당하는 사람의 자리가 없어짐. (유저는 계속 존재하고 :owned라는 relation만 없앰)
+
+
+seat의 cluster id가 바뀌는 예외적인 상황 (1번 cluster에서 자리를 하나 빼서 2번 cluster에 추가하는 경우)
+
+
+update_seat_cluster.py
 
 ### assign_seat
+assign_seat.py
+
+자리가 없는 사람 모두에게 자리를 배정하거나 아니면 pid를 적을 경우 해당하는 사람에게 자리를 배정함.(random)
