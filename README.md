@@ -15,9 +15,11 @@ pip install neo4j  를 통해 neo4j python driver 설치
 
 neo4j에서 localgraph를 만들 때에 password를 letmein으로 설정
 
-neo4j import 폴더에 usertable.csv, clustertable.csv, seattable.csv 넣기
+neo4j import 폴더에 usertable.csv, clustertable.csv, seattable.csv , cluster1.csv 넣기
 
 dbconstraint.py 실행으로 constraint 설정
+
+cluster1.csv 는 cluster에서 칸막이가 없는 자리끼리 near라는 relation으로 연결해주기 위함.
 
 ### register
 
