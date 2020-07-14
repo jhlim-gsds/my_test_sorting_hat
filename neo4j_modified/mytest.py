@@ -17,6 +17,8 @@ with driver.session() as session:
     #match (u:user), (s:seat) where u.pid="1" and s.sid="3" create (u)-[r:owned] ->(s) return type(r)
     #session.run("""load csv from 'file:///relation.csv' as row match (u:user {pid:row[0]}),(s:seat {sid:row[1]})
     #merge (u)-[r:owned]-(s)""")
+    session.run("""load csv from 'file:///cluster1.csv' as row match (s:seat {sid:row[0]}), (s2:seat {sid:row[1]})
+         merge (s)-[r:near]-(s2)""")
 
 print('import completed')
 '''
